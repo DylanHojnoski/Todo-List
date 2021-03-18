@@ -1,0 +1,1 @@
+(()=>{"use strict";let t=new function(t,d,i,e){this.title=t,this.description="dawd",this.dueDate="dwad",this.protity="Dwad",this.getTitle=()=>t}("dwad","dawd","dwad","Dwad");console.log(t.getTitle())})();
