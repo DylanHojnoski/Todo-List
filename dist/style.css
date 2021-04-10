@@ -4,20 +4,87 @@
 }
 
 body {
-    width: 100%;
-    height: 100%;
+   background-color: #131313;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+   height: 100%;
+   padding: 0;
+}
+
+header {
+    background-color: #2b2b2b;
+    width: 100vw;
+    color: #86868b;
+    padding: 10px;
+    padding-top: 1px;
+    border-radius: 0px 10px;
+}
+
+header h1 {
+    padding: 5px;
+}
+
+header input {
+    margin: 10px;
+}
+
+input[type='radio']::before {
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+header button {
+    border: none;
+    background-color: transparent;
+    color: #86868b;
+    padding: 3px;
+    margin: 10px;
+}
+
+header button:hover {
+    border-bottom: 3px solid #86868b;
+    margin-bottom: 7px;
+    
+}
+
+.projectContainer {
+    display: flex;
+    width: 100vw;
+    padding: 10px;
+}
+
+.projectContainer button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.toDoContainer {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .todo {
     background-color: #3b3a3a;
     color: #f0f8ff;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
     text-align: center;
+    flex-basis: 20%;
 }
 
 .todo-priority {
     background-color: #ac2c2c;
     padding: 5px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 800px)
+{
+    .form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
 }

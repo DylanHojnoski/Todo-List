@@ -1,8 +1,6 @@
 import {CreateToDo, createToDoCard} from "./todo.js";
+import {Project} from "./project.js";
+import {menu} from "./menu.js";
 
 
-
-let todo = new CreateToDo("dwad", "dwgrd", "1-4-07", "urgent");
-//todo.createToDoCard();
-createToDoCard(todo);
-console.log("hello");
+menu().showProjects();
