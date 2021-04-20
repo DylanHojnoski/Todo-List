@@ -1,16 +1,18 @@
 import {Project} from "./project.js";
 import { CreateToDo } from "./todo.js";
 
+let activeProject;
+function getActiveProject() {return activeProject};
+
 function menu() {
     let projects = [];
     let isAddProjectFormActive = false;
     let isAddToDoActive = false;
-    let activeProject;
 
-    function getActiveProject() {return activeProject};
     let content = document.querySelector("#content");
     let  header = document.createElement("header");
 
+    
     let title = document.createElement("h1");
     title.textContent = "To Do List";
 
@@ -83,7 +85,7 @@ function menu() {
         let project = document.createElement("button");
         project.addEventListener("click", () => {
             projects[projects.length-1].showToDos();
-            activeProject = projects.findIndex(project);
+            activeProject = projects[projects.length-1];
         });
         project.textContent = projects[projects.length-1].getName();
         projectContainer.append(project);
@@ -169,4 +171,4 @@ function menu() {
 }
 
 
-export {menu};
+export {menu, getActiveProject};

@@ -1,3 +1,5 @@
+import {menu, getActiveProject} from "./menu.js";
+import {Project} from "./project.js";
 
 function CreateToDo(title, description, dueDate, priority) {
     this.title = title;
@@ -19,7 +21,9 @@ function createToDoCard(item) {
 
     let deleteButton = document.createElement("button");
     deleteButton.addEventListener("click", () => {
-        
+        let project = getActiveProject();
+        console.log(project);
+        project.findToDO(title);
         card.remove();
     });
     deleteButton.textContent = "X";
@@ -48,5 +52,6 @@ function createToDoCard(item) {
     card.append(priority);
     toDoContainer.append(card);
 } 
+
 
 export {CreateToDo, createToDoCard};

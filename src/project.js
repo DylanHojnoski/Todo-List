@@ -25,11 +25,16 @@ function Project(name) {
         }
     }
 
+    function findToDo(todo) {
+        let index = todos.findIndex(todo);
+        removeToDo(index);
+    }
+
     function removeToDo(index) {
         todos.splice(index, 1);
     }
 
-    return {addToDo, showToDos, getName, removeToDo};
+    return {addToDo, showToDos, getName, removeToDo, findToDo};
 }
 
 export {Project};
